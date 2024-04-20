@@ -414,6 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlaceable: 1
+  towerPrefab: {fileID: 885205480979380583, guid: 53236910fba760d4e9cd021b47351071, type: 3}
 --- !u!65 &7429245020090221722
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -6,10 +6,12 @@ public class Waypoint : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] bool isPlaceable;
-    void OnMouseOver() {
+    [SerializeField] GameObject towerPrefab;
+    void OnMouseDown() {
        
        if (isPlaceable) {
-         Debug.Log(this.transform.name);
+          Instantiate(towerPrefab,transform.position,Quaternion.identity);
+          isPlaceable=false;
        }
     }
 }
