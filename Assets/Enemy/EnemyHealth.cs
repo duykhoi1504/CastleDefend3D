@@ -6,19 +6,20 @@ public class EnemyHealth : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] int EnemyHP;
-    [SerializeField] int cunrentHP;
-    void Start()
+    [SerializeField] int cunrentHitHP;
+    void OnEnable()
     {
-        cunrentHP=EnemyHP;
+        cunrentHitHP=EnemyHP;
     }
 
     private void OnParticleCollision(GameObject other) {
         ProcessHit();
     }
     void ProcessHit(){
-        cunrentHP--;
-        if(cunrentHP <= 0){
-            Destroy(this.gameObject);
+        cunrentHitHP--;
+        if(cunrentHitHP <= 0){
+            // Destroy(this.gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
