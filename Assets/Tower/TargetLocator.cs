@@ -7,6 +7,8 @@ public class TargetLocator : MonoBehaviour
 {
     // Start is called before the first frame update
     // [SerializeField] Transform weapon;
+    [SerializeField] ParticleSystem projecttileParticles;
+    [SerializeField] float range= 15f;
     Transform target;
 
     // Update is called once per frame
@@ -35,11 +37,19 @@ public class TargetLocator : MonoBehaviour
     }
     void AimTower()
     {
- 
         // Debug.DrawRay(this.transform.position, dir, Color.red);
-        // float Distance = Vector3.Distance(this.transform.position, target.transform.position);
+        float targetDistance = Vector3.Distance(this.transform.position, target.position);
         transform.LookAt(target.position);
+        if(targetDistance<range){
+            Attack(true);
+        }else{
+            Attack(false);
+        }
+    }
 
+    void Attack(bool isActive){
+        var emissionModule= projecttileParticles.emission;
+        emissionModule.enabled=isActive;
     }
   
 }

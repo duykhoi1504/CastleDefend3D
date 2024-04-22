@@ -75,8 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7b925fa7f4aaf4bbb6b3826ab13377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHP: 10
-  cunrentHP: 0
+  EnemyHP: 2
+  cunrentHitHP: 0
 --- !u!114 &5178817163099089186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f1fd247e90558448a221bcf2603eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldReward: 25
+  goldPenalty: 25
 --- !u!1 &3099585203001437611
 GameObject:
   m_ObjectHideFlags: 0
