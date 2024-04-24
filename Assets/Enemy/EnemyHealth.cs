@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.EditorTools;
 using UnityEngine;
 
+
+[RequireComponent(typeof(Enemy))]
 public class EnemyHealth : MonoBehaviour
 {
     // Start is called before the first frame update
+
     [SerializeField] int EnemyHP;
-    [SerializeField] int cunrentHitHP;
+    int cunrentHitHP;
+
+    [Tooltip("Adds amount to EnemyHP when thay dies.")]
+    [SerializeField] int difficultyRamp = 1;
     Enemy enemy;
     void OnEnable()
     {
@@ -25,7 +32,7 @@ public class EnemyHealth : MonoBehaviour
         cunrentHitHP--;
         if (cunrentHitHP <= 0)
         {
-            
+            EnemyHP += difficultyRamp;
             // Destroy(this.gameObject);
             gameObject.SetActive(false);
             enemy.RewardGold();

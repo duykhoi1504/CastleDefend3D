@@ -5,6 +5,7 @@ using TMPro;
 using System;
 
 [ExecuteAlways]
+[RequireComponent(typeof(TextMeshPro))]
 public class CoordinateLabeler : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -30,12 +31,13 @@ public class CoordinateLabeler : MonoBehaviour
         {
             DisplayCoordinates();
             UpdateObjectName();
+            label.enabled=true;
 
         }
-        ColorCoordinates(); 
+        SetLabelColor();
         ToggleLabels();
     }
-    void ToggleLabels()
+    void ToggleLabels()  
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -43,12 +45,16 @@ public class CoordinateLabeler : MonoBehaviour
         }
     }
 
-    void ColorCoordinates()
+    void SetLabelColor()
     {
         if (wayPoint.IsPlaceable)
+        {
             label.color = defaultColor;
+        }
         else
+        {
             label.color = blockedColor;
+        }
     }
 
     void DisplayCoordinates()

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: []
-  speed: 0.666
+  speed: 0.5
 --- !u!65 &7254656508900746841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61,8 +61,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1743308, y: 3.13304, z: 2.8853188}
-  m_Center: {x: 0.0011059642, y: 2.1516452, z: 0.11965108}
+  m_Size: {x: 3, y: 3, z: 3}
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!114 &4196185482440578364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,8 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7b925fa7f4aaf4bbb6b3826ab13377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHP: 2
-  cunrentHitHP: 0
+  EnemyHP: 3
+  difficultyRamp: 5
 --- !u!114 &5178817163099089186
 MonoBehaviour:
   m_ObjectHideFlags: 0
