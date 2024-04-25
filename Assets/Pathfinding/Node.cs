@@ -8,7 +8,7 @@ public class Node
 {
     public Vector2Int coordinates;
     public bool isWalkable;
-    public bool isExploring;
+    public bool isExplord;
     public bool isPath;
     public  Node connectedTo;
     public Node(Vector2Int coordinates, bool isWalkable){

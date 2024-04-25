@@ -5717,6 +5717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 478864588}
   - component: {fileID: 478864587}
+  - component: {fileID: 478864589}
   m_Layer: 0
   m_Name: ObjectPool
   m_TagString: Untagged
@@ -5754,6 +5755,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &478864589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478864586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96fb41b53a81aec4a91e8cb110c10f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSearchNode:
+    coordinates: {x: 2, y: 1}
+    isWalkable: 0
+    isExplord: 0
+    isPath: 0
 --- !u!1001 &484770678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11846,7 +11864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12517409371838a4ead871aa8e155783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 12, y: 4}
+  gridSize: {x: 5, y: 5}
 --- !u!4 &1115321659
 Transform:
   m_ObjectHideFlags: 0
@@ -11958,6 +11976,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5904659544006783897, guid: a296d92ecc1ca454690239bfaf84e689, type: 3}
   m_PrefabInstance: {fileID: 625806809}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1133486276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5763319507677508413, guid: 28bbdb842363491489e6e086b399255d, type: 3}
+  m_PrefabInstance: {fileID: 5763319508853400514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1133486279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133486276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96fb41b53a81aec4a91e8cb110c10f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSearchNode:
+    coordinates: {x: 0, y: 0}
+    isWalkable: 0
+    isExplord: 0
+    isPath: 0
 --- !u!4 &1142488979 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5904659544006783897, guid: a296d92ecc1ca454690239bfaf84e689, type: 3}
